@@ -1,0 +1,25 @@
+{% extends "Default.html" %}
+
+{% block main %}
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset>
+        <legend>
+            Add Task!!
+        </legend>
+
+        <div>
+            {{form.TaskName.label(class="form-control-label")}}
+            {{form.TaskName(class="form-control")}}
+        </div>
+
+        <div>
+            {{form.TaskDeadline.label(class="form-control-label")}}
+            {{form.TaskDeadline(class="form-control")}}
+        </div>
+    </fieldset>
+
+    <div>
+        {{ form.submit }}
+    </div>
+{% endblock %}

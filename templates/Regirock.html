@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+</head>
+
+<body>
+    <header>   
+    <header>
+
+    <main>
+        <div>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset>
+                    <legend>
+                        Join Us Today!!
+                    </legend>
+
+                    <div>
+                        {{form.name.label(class="form-control-label")}}
+                        {{form.name(class="form-control")}}
+                    </div>
+
+                    <div>
+                        {{form.age.label(class="form-control-label")}}
+                        {{form.age(class="form-control")}}
+                    </div>
+
+                    <div>
+                        {{form.UID.label(class="form-control-label")}}
+                        {{form.UID(class="form-control")}}
+                    </div>
+                </fieldset>
+
+                <div>
+                    {{ form.submit(class="btn") }}
+                </div>
+            </form>
+        </div>
+    </main>
+</body>

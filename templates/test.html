@@ -1,0 +1,34 @@
+{% extends "Default.html" %}
+
+{% block main %}
+    {% for task in tasks %}
+        {% if task.status=="OVERDUE" %}
+            <div>
+                <h3>{{task.name}}</h3>
+                <h4>{{task.status}}</h4>
+                <h5>{{task.deadline}}</h5>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    {% for task in tasks %}
+        {% if task.status=="PENDING" %}
+            <div>
+                <h3>{{task.name}}</h3>
+                <h4>{{task.status}}</h4>
+                <h5>{{task.deadline}}</h5>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    {% for task in tasks %}
+        {% if task.status=="DONE" %}
+            <div>
+                <h3>{{task.name}}</h3>
+                <h4>{{task.status}}</h4>
+                <h5>{{task.deadline}}</h5>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+{% block footer %}BOTTOM TeXT{% endblock %}
